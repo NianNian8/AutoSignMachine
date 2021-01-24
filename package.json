@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "自动签到机器人",
   "main": "index.js",
-  "repository": "https://github.com/lunnlew/AutoSignMachine.git",
+  "repository": "https://github.com/dorobonneko/AutoSignMachine.git",
   "author": "lunnlew",
   "license": "MIT",
   "dependencies": {
