@@ -47,4 +47,4 @@ jobs:
     - name: Run bilibili daily task
       env:
         cookie: ${{ secrets.bilibili_cookies }}
-      run: node index.js bilibili --cookies ${env.cookie} --tryrun
+      run: node index.js bilibili --cookies ${cookie} --tryrun
