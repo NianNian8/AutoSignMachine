@@ -18,7 +18,12 @@ var start = async (params) => {
     init
   }
 
+// 首页-游戏-娱乐中心-天天领取3G流量包
+  await scheduler.regTask('dailygameflow', async (request) => {
+    await require('./producGame').doGameFlowTask(request, options)
+  }, taskOption)
   // 每日签到积分
+
   await scheduler.regTask('dailysignin', async (request) => {
     await require('./dailysignin').doTask(request, options)
   }, taskOption)
@@ -114,10 +119,7 @@ var start = async (params) => {
     ...taskOption
   })
 
-// 首页-游戏-娱乐中心-天天领取3G流量包
-  await scheduler.regTask('dailygameflow', async (request) => {
-    await require('./producGame').doGameFlowTask(request, options)
-  }, taskOption)
+
 
   // 首页-签到有礼-免费抽-拆华为Pad(去抽奖)
   await scheduler.regTask('dailyLKMH', async (request) => {
