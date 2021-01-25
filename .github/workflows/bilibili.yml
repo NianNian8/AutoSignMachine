@@ -46,5 +46,5 @@ jobs:
     # 运行 bilibili 签到任务
     - name: Run bilibili daily task
       env:
-        cookies: ${{ secrets.bilibili.cookies }}
+        cookies: ${{ secrets.bilibili_cookies }}
       run: node index.js bilibili --cookies "${env.cookies}" --tryrun
